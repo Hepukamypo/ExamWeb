@@ -1,0 +1,64 @@
+#notifications-container {
+    z-index: 9999;
+    max-width: 350px;
+}
+
+.alert {
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    margin-bottom: 0.75rem;
+    animation: fadeInDown 0.3s;
+}
+
+.alert-dismissible .btn-close {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    z-index: 2;
+    padding: 0.25rem;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 0.25rem;
+    transition: all 0.3s ease;
+}
+
+.alert-dismissible .btn-close:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOutUp {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+}
+
+.alert.alert-success {
+    border-left: 4px solid var(--success-color);
+}
+
+.alert.alert-info {
+    border-left: 4px solid var(--info-color);
+}
+
+.alert.alert-warning {
+    border-left: 4px solid var(--warning-color);
+}
+
+.alert.alert-danger {
+    border-left: 4px solid var(--danger-color);
+}
