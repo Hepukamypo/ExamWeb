@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LinguaWorld - Языковая школа</title>
+<!-- Подключение Bootstrap 5.3 -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Подключение Font Awesome для иконок -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<!-- Подключение кастомных стилей -->
+<link rel="stylesheet" href="assets/css/main.css">
+<link rel="stylesheet" href="assets/css/notifications.css">
+</head>
+<body>
+<!-- Шапка сайта -->
+<header class="sticky-top">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+<div class="container">
+<a class="navbar-brand d-flex align-items-center" href="index.html">
+<img src="assets/images/logo.png" alt="LinguaWorld" width="40" height="40" class="me-2">
+<span>LinguaWorld</span>
+</a>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarNav">
+<ul class="navbar-nav ms-auto">
+<li class="nav-item">
+<a class="nav-link active" href="index.html">Главная</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="#courses">Курсы</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="#about">О нас</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="#contacts">Контакты</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="cabinet.html">Личный кабинет</a>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+<!-- Область уведомлений -->
+<div id="notifications-container" class="position-fixed top-0 end-0 p-3" style="z-index: 9999;"></div>
+</header>
+<!-- Блок описания языковой школы -->
+<section class="py-5 bg-light">
+<div class="container">
+<div class="row align-items-center">
+<div class="col-lg-6 mb-4 mb-lg-0">
+<h1 class="display-4 fw-bold">Освойте любой язык с LinguaWorld</h1>
+<p class="lead">Профессиональные преподаватели, современные методики и индивидуальный подход помогут вам достичь поставленных целей в изучении иностранных языков.</p>
+<div class="d-grid gap-2 d-md-flex justify-content-md-start mt-4">
+<button class="btn btn-primary btn-lg px-4 me-md-2" data-bs-toggle="modal" data-bs-target="#orderModal">
+<i class="fas fa-graduation-cap me-2"></i>Начать обучение
+</button>
+<a href="#courses" class="btn btn-outline-secondary btn-lg px-4">
+<i class="fas fa-book me-2"></i>Наши курсы
+</a>
+</div>
+</div>
+<div class="col-lg-6">
+<div class="ratio ratio-16x9 rounded shadow">
+<img src="assets/images/school.jpg" class="w-100 h-100 object-fit-cover" alt="Наша школа">
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Преимущества изучения иностранного языка -->
+<section class="py-5" id="advantages">
+<div class="container">
+<div class="text-center mb-5">
+<h2 class="fw-bold">Почему стоит изучать языки с нами?</h2>
+<p class="text-muted">Наши преимущества перед другими школами</p>
+</div>
+<div class="row g-4">
+<div class="col-md-6 col-lg-3">
+<div class="card h-100 border-0 shadow-sm">
+<div class="card-body text-center p-4">
+<div class="bg-primary bg-opacity-10 rounded-circle p-3 d-inline-block mb-3">
+<i class="fas fa-globe fs-1 text-primary"></i>
+</div>
+<h4 class="card-title">Глобальные возможности</h4>
+<p class="card-text">Откройте для себя мир и расширьте горизонты благодаря знанию иностранных языков.</p>
+</div>
+</div>
+</div>
+<div class="col-md-6 col-lg-3">
+<div class="card h-100 border-0 shadow-sm">
+<div class="card-body text-center p-4">
+<div class="bg-success bg-opacity-10 rounded-circle p-3 d-inline-block mb-3">
+<i class="fas fa-brain fs-1 text-success"></i>
+</div>
+<h4 class="card-title">Когнитивные преимущества</h4>
+<p class="card-text">Изучение языков развивает память, мышление и креативность, улучшая общие когнитивные функции.</p>
+</div>
+</div>
+</div>
+<div class="col-md-6 col-lg-3">
+<div class="card h-100 border-0 shadow-sm">
+<div class="card-body text-center p-4">
+<div class="bg-info bg-opacity-10 rounded-circle p-3 d-inline-block mb-3">
+<i class="fas fa-briefcase fs-1 text-info"></i>
+</div>
+<h4 class="card-title">Карьерный рост</h4>
+<p class="card-text">Знание иностранных языков значительно повышает ваши шансы на успешную карьеру в международных компаниях.</p>
+</div>
+</div>
+</div>
+<div class="col-md-6 col-lg-3">
+<div class="card h-100 border-0 shadow-sm">
+<div class="card-body text-center p-4">
+<div class="bg-warning bg-opacity-10 rounded-circle p-3 d-inline-block mb-3">
+<i class="fas fa-users fs-1 text-warning"></i>
+</div>
+<h4 class="card-title">Межкультурное общение</h4>
+<p class="card-text">Познакомьтесь с новыми культурами и заведите друзей со всего мира, используя иностранные языки как мост.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Форма поиска курсов -->
+<section class="py-4 bg-light border-bottom">
+<div class="container">
+<div class="row justify-content-center">
+<div class="col-md-8">
+<div class="input-group">
+<input type="text" id="courseSearchInput" class="form-control" placeholder="Поиск курсов по названию или уровню...">
+<button class="btn btn-primary" type="button" id="searchButton">
+<i class="fas fa-search"></i>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Предлагаемые курсы -->
+<section class="py-5" id="courses">
+<div class="container">
+<div class="text-center mb-5">
+<h2 class="fw-bold">Наши языковые курсы</h2>
+<p class="text-muted">Выберите подходящий курс для изучения иностранного языка</p>
+</div>
+<div id="coursesContainer" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mb-5">
+<!-- Курсы будут загружены динамически через JavaScript -->
+<div class="col text-center py-5">
+<div class="spinner-border text-primary" role="status">
+<span class="visually-hidden">Загрузка...</span>
+</div>
+<p class="mt-3 text-muted">Загрузка списка курсов...</p>
+</div>
+</div>
+<!-- Пагинация курсов -->
+<nav aria-label="Pagination for courses">
+<ul id="coursesPagination" class="pagination justify-content-center">
+<!-- Пагинация будет сгенерирована динамически -->
+</ul>
+</nav>
+</div>
+</section>
+<!-- Форма поиска репетиторов -->
+<section class="py-4 bg-light border-bottom">
+<div class="container">
+<div class="row g-3">
+<div class="col-md-6">
+<select id="languageFilter" class="form-select" aria-label="Фильтр по языкам">
+<option value="">Все языки</option>
+<option value="English">Английский</option>
+<option value="Spanish">Испанский</option>
+<option value="French">Французский</option>
+<option value="German">Немецкий</option>
+<option value="Italian">Итальянский</option>
+<option value="Chinese">Китайский</option>
+<option value="Japanese">Японский</option>
+<option value="Russian">Русский</option>
+</select>
+</div>
+<div class="col-md-6">
+<select id="levelFilter" class="form-select" aria-label="Фильтр по уровню">
+<option value="">Любой уровень</option>
+<option value="Beginner">Начальный</option>
+<option value="Intermediate">Средний</option>
+<option value="Advanced">Продвинутый</option>
+<option value="Expert">Эксперт</option>
+</select>
+</div>
+</div>
+</div>
+</section>
+<!-- Список репетиторов -->
+<section class="py-5">
+<div class="container">
+<div class="text-center mb-5">
+<h2 class="fw-bold">Наши преподаватели</h2>
+<p class="text-muted">Профессиональные преподаватели с большим опытом работы</p>
+</div>
+<div class="table-responsive">
+<table class="table table-striped table-hover align-middle">
+<thead class="table-primary">
+<tr>
+<th scope="col">Фото</th>
+<th scope="col">Имя преподавателя</th>
+<th scope="col">Уровень языка</th>
+<th scope="col">Языки</th>
+<th scope="col">Опыт (лет)</th>
+<th scope="col">Ставка (руб./час)</th>
+<th scope="col">Действие</th>
+</tr>
+</thead>
+<tbody id="tutorsTableBody">
+<!-- Репетиторы будут загружены динамически через JavaScript -->
+<tr>
+<td colspan="7" class="text-center py-5">
+<div class="spinner-border text-primary" role="status">
+<span class="visually-hidden">Загрузка...</span>
+</div>
+<p class="mt-3 text-muted">Загрузка списка преподавателей...</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<!-- Блок "О нас" -->
+<section class="py-5 bg-light" id="about">
+<div class="container">
+<div class="row align-items-center">
+<div class="col-lg-6 mb-4 mb-lg-0">
+<h2 class="fw-bold mb-4">О нашей языковой школе</h2>
+<p class="lead mb-4">LinguaWorld — это современная языковая школа, которая существует с 2010 года и помогла более 10 000 студентов освоить иностранные языки.</p>
+<p>Наша миссия — сделать изучение языков доступным, эффективным и увлекательным процессом для каждого студента, независимо от возраста и начального уровня.</p>
+<p>Мы гордимся нашими преподавателями, которые являются носителями языка или имеют международные сертификаты преподавателей (CELTA, DELTA, TESOL).</p>
+<div class="mt-4">
+<button class="btn btn-outline-primary me-2" data-bs-toggle="modal" data-bs-target="#orderModal">
+<i class="fas fa-calendar-plus me-1"></i>Записаться на пробное занятие
+</button>
+<a href="#contacts" class="btn btn-primary">
+<i class="fas fa-phone me-1"></i>Связаться с нами
+</a>
+</div>
+</div>
+<div class="col-lg-6">
+<div class="row g-3">
+<div class="col-6">
+<div class="card border-0 shadow-sm">
+<img src="https://picsum.photos/seed/classroom/300/200" class="card-img-top" alt="Класс">
+</div>
+</div>
+<div class="col-6">
+<div class="card border-0 shadow-sm">
+<img src="https://picsum.photos/seed/teacher/300/200" class="card-img-top" alt="Преподаватель">
+</div>
+</div>
+<div class="col-6">
+<div class="card border-0 shadow-sm">
+<img src="https://picsum.photos/seed/students/300/200" class="card-img-top" alt="Студенты">
+</div>
+</div>
+<div class="col-6">
+<div class="card border-0 shadow-sm">
+<img src="https://picsum.photos/seed/library/300/200" class="card-img-top" alt="Библиотека">
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Контакты -->
+<section class="py-5" id="contacts">
+<div class="container">
+<div class="text-center mb-5">
+<h2 class="fw-bold">Контактная информация</h2>
+<p class="text-muted">Свяжитесь с нами любым удобным способом</p>
+</div>
+<div class="row g-4">
+<div class="col-md-4 text-center">
+<div class="bg-primary bg-opacity-10 rounded-circle p-3 d-inline-block mb-3">
+<i class="fas fa-map-marker-alt fs-1 text-primary"></i>
+</div>
+<h4>Адрес</h4>
+<p class="mb-0">г. Санкт-Петербург, ул. Лингвистическая, д. 25</p>
+<p>Бизнес-центр "LinguaWorld", офис 505</p>
+</div>
+<div class="col-md-4 text-center">
+<div class="bg-primary bg-opacity-10 rounded-circle p-3 d-inline-block mb-3">
+<i class="fas fa-phone fs-1 text-primary"></i>
+</div>
+<h4>Телефон</h4>
+<p class="mb-0">+7 (812) 987-65-43</p>
+<p>Пн-Пт: 10:00 - 20:00, Сб: 11:00 - 17:00</p>
+</div>
+<div class="col-md-4 text-center">
+<div class="bg-primary bg-opacity-10 rounded-circle p-3 d-inline-block mb-3">
+<i class="fas fa-envelope fs-1 text-primary"></i>
+</div>
+<h4>Email</h4>
+<p class="mb-0">info@linguaworld.ru</p>
+<p>support@linguaworld.ru</p>
+</div>
+</div>
+<div class="row mt-5">
+<div class="col-12">
+<div class="ratio ratio-16x9 rounded shadow">
+<div id="map" style="width: 100%; height: 100%; background-color: #eee;"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Модальное окно для оформления заявки -->
+<div class="modal fade" id="orderModal" tabindex="-1" aria-hidden="true">
+<div class="modal-dialog modal-lg">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title" id="orderModalLabel">Оформление заявки</h5>
+<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+</div>
+<div class="modal-body">
+<form id="orderForm">
+<input type="hidden" id="orderId">
+<input type="hidden" id="selectedTutorId">
+<input type="hidden" id="selectedCourseId">
+<div class="mb-3">
+<label class="form-label fw-bold">Тип заявки</label>
+<div class="form-check">
+<input class="form-check-input" type="radio" name="orderType" id="courseOrder" value="course" checked>
+<label class="form-check-label" for="courseOrder">Языковой курс</label>
+</div>
+<div class="form-check">
+<input class="form-check-input" type="radio" name="orderType" id="tutorOrder" value="tutor">
+<label class="form-check-label" for="tutorOrder">Индивидуальные занятия с репетитором</label>
+</div>
+</div>
+<div id="courseSection">
+<div class="mb-3">
+<label for="courseName" class="form-label">Название курса</label>
+<input type="text" class="form-control" id="courseName" readonly>
+</div>
+<div class="mb-3">
+<label for="teacherName" class="form-label">Преподаватель</label>
+<input type="text" class="form-control" id="teacherName" readonly>
+</div>
+<div class="row mb-3">
+<div class="col-md-6">
+<label for="startDate" class="form-label">Дата начала</label>
+<select class="form-select" id="startDate" required>
+<option value="">Выберите дату</option>
+</select>
+</div>
+<div class="col-md-6">
+<label for="startTime" class="form-label">Время занятий</label>
+<select class="form-select" id="startTime" disabled required>
+<option value="">Сначала выберите дату</option>
+</select>
+</div>
+</div>
+<div class="mb-3">
+<label class="form-label">Продолжительность курса</label>
+<div class="input-group">
+<input type="text" class="form-control" id="courseDuration" readonly>
+<span class="input-group-text">недель</span>
+</div>
+<div class="form-text">Ориентировочная дата окончания: <span id="endDate"></span></div>
+</div>
+</div>
+<div id="tutorSection" class="d-none">
+<div class="mb-3">
+<label for="tutorName" class="form-label">Репетитор</label>
+<input type="text" class="form-control" id="tutorName" readonly>
+</div>
+<div class="row mb-3">
+<div class="col-md-6">
+<label for="tutorDate" class="form-label">Дата занятия</label>
+<input type="date" class="form-control" id="tutorDate" required>
+</div>
+<div class="col-md-6">
+<label for="tutorTime" class="form-label">Время занятия</label>
+<select class="form-select" id="tutorTime" required>
+<option value="09:00">09:00 - 10:00</option>
+<option value="10:00">10:00 - 11:00</option>
+<option value="11:00">11:00 - 12:00</option>
+<option value="12:00">12:00 - 13:00</option>
+<option value="13:00">13:00 - 14:00</option>
+<option value="14:00">14:00 - 15:00</option>
+<option value="15:00">15:00 - 16:00</option>
+<option value="16:00">16:00 - 17:00</option>
+<option value="17:00">17:00 - 18:00</option>
+<option value="18:00">18:00 - 19:00</option>
+<option value="19:00">19:00 - 20:00</option>
+</select>
+</div>
+</div>
+<div class="mb-3">
+<label for="durationHours" class="form-label">Продолжительность занятия (часы)</label>
+<input type="number" class="form-control" id="durationHours" min="1" max="4" value="1" required>
+</div>
+</div>
+<div class="mb-3">
+<label for="studentsNumber" class="form-label">Количество студентов</label>
+<input type="number" class="form-control" id="studentsNumber" min="1" max="20" value="1" required>
+</div>
+<div class="mb-3">
+<label class="form-label fw-bold">Дополнительные опции</label>
+<div class="row">
+<div class="col-md-6">
+<div class="form-check mb-2">
+<input class="form-check-input" type="checkbox" id="supplementary" value="1">
+<label class="form-check-label" for="supplementary">
+Дополнительные материалы (+2000 ₽ на студента)
+</label>
+</div>
+<div class="form-check mb-2">
+<input class="form-check-input" type="checkbox" id="personalized" value="1">
+<label class="form-check-label" for="personalized">
+Индивидуальные занятия (+1500 ₽ за неделю)
+</label>
+</div>
+<div class="form-check mb-2">
+<input class="form-check-input" type="checkbox" id="assessment" value="1">
+<label class="form-check-label" for="assessment">
+Оценка уровня (+300 ₽)
+</label>
+</div>
+</div>
+<div class="col-md-6">
+<div class="form-check mb-2">
+<input class="form-check-input" type="checkbox" id="excursions" value="1">
+<label class="form-check-label" for="excursions">
+Культурные экскурсии (+25%)
+</label>
+</div>
+<div class="form-check mb-2">
+<input class="form-check-input" type="checkbox" id="interactive" value="1">
+<label class="form-check-label" for="interactive">
+Доступ к онлайн-платформе (+50%)
+</label>
+</div>
+</div>
+</div>
+</div>
+<div class="mb-3 p-3 bg-light rounded">
+<div class="d-flex justify-content-between align-items-center">
+<h5 class="mb-0">Общая стоимость:</h5>
+<h3 class="mb-0 text-primary" id="totalPrice">0 ₽</h3>
+</div>
+<div class="mt-2" id="priceBreakdown"></div>
+</div>
+</form>
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Отмена</button>
+<button type="button" class="btn btn-primary" id="submitOrder">Отправить заявку</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Модальное окно подтверждения удаления -->
+<div class="modal fade" id="deleteConfirmModal" tabindex="-1" aria-hidden="true">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title">Подтверждение удаления</h5>
+<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+</div>
+<div class="modal-body">
+<p>Вы уверены, что хотите удалить эту заявку?</p>
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Нет</button>
+<button type="button" class="btn btn-danger" id="confirmDelete">Да, удалить</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Футер -->
+<footer class="bg-dark text-white py-5">
+<div class="container">
+<div class="row">
+<div class="col-lg-4 mb-4 mb-lg-0">
+<div class="d-flex align-items-center mb-3">
+<img src="assets/images/logo.png" alt="LinguaWorld" width="40" height="40" class="me-2">
+<h3 class="mb-0">LinguaWorld</h3>
+</div>
+<p>Профессиональная языковая школа с индивидуальным подходом к каждому студенту. Мы помогаем осваивать языки с 2010 года.</p>
+<div class="d-flex mt-3">
+<a href="#" class="text-white me-3"><i class="fab fa-facebook-f fs-5"></i></a>
+<a href="#" class="text-white me-3"><i class="fab fa-instagram fs-5"></i></a>
+<a href="#" class="text-white me-3"><i class="fab fa-telegram fs-5"></i></a>
+<a href="#" class="text-white"><i class="fab fa-vk fs-5"></i></a>
+</div>
+</div>
+<div class="col-lg-4 mb-4 mb-lg-0">
+<h4 class="mb-4">Полезные ссылки</h4>
+<ul class="list-unstyled">
+<li class="mb-2"><a href="index.html" class="text-white text-decoration-none">Главная страница</a></li>
+<li class="mb-2"><a href="#courses" class="text-white text-decoration-none">Наши курсы</a></li>
+<li class="mb-2"><a href="#about" class="text-white text-decoration-none">О нас</a></li>
+<li class="mb-2"><a href="#contacts" class="text-white text-decoration-none">Контакты</a></li>
+<li class="mb-2"><a href="cabinet.html" class="text-white text-decoration-none">Личный кабинет</a></li>
+</ul>
+</div>
+<div class="col-lg-4">
+<h4 class="mb-4">Контакты</h4>
+<ul class="list-unstyled">
+<li class="mb-2 d-flex"><i class="fas fa-map-marker-alt mt-1 me-2"></i> <span>г. Санкт-Петербург, ул. Лингвистическая, д. 25</span></li>
+<li class="mb-2 d-flex"><i class="fas fa-phone mt-1 me-2"></i> <span>+7 (812) 987-65-43</span></li>
+<li class="mb-2 d-flex"><i class="fas fa-envelope mt-1 me-2"></i> <span>info@linguaworld.ru</span></li>
+<li class="mb-2 d-flex"><i class="fas fa-clock mt-1 me-2"></i> <span>Пн-Пт: 10:00-20:00, Сб: 11:00-17:00</span></li>
+</ul>
+</div>
+</div>
+<hr class="my-4 bg-secondary">
+<div class="text-center">
+<p class="mb-0">&copy; 2026 LinguaWorld. Все права защищены.</p>
+</div>
+</div>
+</footer>
+<!-- Подключение JavaScript -->
+<script>
+// API ключ
+const API_KEY = '043f7d68-3cee-44dd-9ba1-bfed45a44f99';
+const API_BASE_URL = 'http://exam-api-courses.std-900.ist.mospolytech.ru';
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://api-maps.yandex.ru/2.1/?apikey=e0f9b48e-46a4-4c6a-9d5c-3c8f2b7b4e9a&lang=ru_RU" type="text/javascript"></script>
+<script src="assets/js/api.js"></script>
+<script src="assets/js/courses.js"></script>
+<script src="assets/js/tutors.js"></script>
+<script src="assets/js/orders.js"></script>
+<script src="assets/js/calculator.js"></script>
+<script src="assets/js/notifications.js"></script>
+<script src="assets/js/pagination.js"></script>
+<script>
+// Инициализация карты
+function initMap() {
+const map = new ymaps.Map('map', {
+center: [59.934282, 30.315139],
+zoom: 10,
+controls: ['zoomControl', 'searchControl']
+}, {
+searchControlProvider: 'yandex#search'
+});
+// Добавление метки с адресом школы
+const schoolPlacemark = new ymaps.Placemark([59.934282, 30.315139], {
+balloonContent: `
+<div class="p-2">
+<h5>LinguaWorld</h5>
+<p>г. Санкт-Петербург, ул. Лингвистическая, д. 25</p>
+<p>Бизнес-центр "LinguaWorld", офис 505</p>
+<p>+7 (812) 987-65-43</p>
+</div>
+`
+}, {
+preset: 'islands#blueDotIcon'
+});
+map.geoObjects.add(schoolPlacemark);
+}
+// Проверка API ключа при загрузке страницы
+document.addEventListener('DOMContentLoaded', function() {
+if (API_KEY === 'ВАШ_API_КЛЮЧ' || !API_KEY) {
+console.error('ПРЕДУПРЕЖДЕНИЕ: API ключ не установлен! Получите реальный ключ в СДО Московского Политеха.');
+showNotification('API ключ не установлен. Получите ключ в СДО Московского Политеха.', 'warning');
+} else {
+console.log('API ключ установлен:', API_KEY.substring(0, 8) + '...');
+}
+// Загрузка курсов
+loadCourses();
+// Загрузка репетиторов
+loadTutors();
+// Инициализация обработчиков событий
+initEventListeners();
+// Инициализация карты после полной загрузки API Яндекс.Карт
+ymaps.ready(initMap);
+});
+function initEventListeners() {
+// Переключение между типами заявок
+document.querySelectorAll('input[name="orderType"]').forEach(radio => {
+radio.addEventListener('change', function() {
+document.getElementById('courseSection').classList.toggle('d-none', this.value !== 'course');
+document.getElementById('tutorSection').classList.toggle('d-none', this.value !== 'tutor');
+updatePriceCalculation();
+});
+});
+// Динамический расчет стоимости
+document.getElementById('startDate').addEventListener('change', updatePriceCalculation);
+document.getElementById('startTime').addEventListener('change', updatePriceCalculation);
+document.getElementById('studentsNumber').addEventListener('change', updatePriceCalculation);
+document.getElementById('tutorDate').addEventListener('change', updatePriceCalculation);
+document.getElementById('tutorTime').addEventListener('change', updatePriceCalculation);
+document.getElementById('durationHours').addEventListener('change', updatePriceCalculation);
+// Обработчики чекбоксов
+document.querySelectorAll('#orderForm input[type="checkbox"]').forEach(checkbox => {
+checkbox.addEventListener('change', updatePriceCalculation);
+});
+// Обработчики фильтрации
+document.getElementById('courseSearchInput').addEventListener('input', filterCourses);
+document.getElementById('languageFilter').addEventListener('change', filterTutors);
+document.getElementById('levelFilter').addEventListener('change', filterTutors);
+// Обработчик отправки заявки
+document.getElementById('submitOrder').addEventListener('click', submitOrder);
+}
+// Добавляем обработку ошибок API
+window.addEventListener('unhandledrejection', event => {
+console.error('Необработанное обещание:', event.reason);
+showNotification('Произошла ошибка: ' + event.reason.message, 'danger');
+});
+</script>
+<!-- Скрипт для обработки кнопок "Выбрать" репетиторов -->
+<script>
+// Глобальная функция для выбора репетитора
+window.selectTutor = function(tutorId) {
+console.log('Выбран репетитор с ID:', tutorId);
+// Проверка наличия данных о репетиторах
+if (typeof allTutors === 'undefined') {
+console.error('Переменная allTutors не определена');
+showNotification('Ошибка: данные о репетиторах не загружены', 'danger');
+return;
+}
+const tutor = allTutors.find(t => t.id === tutorId);
+if (!tutor) {
+console.error('Репетитор с ID', tutorId, 'не найден в списке');
+showNotification('Ошибка: репетитор не найден', 'danger');
+return;
+}
+console.log('Найден репетитор:', tutor);
+// Выделение выбранной строки
+document.querySelectorAll('.tutor-row').forEach(row => {
+row.classList.remove('table-primary');
+});
+const selectedRow = document.querySelector(`.tutor-row[data-tutor-id="${tutorId}"]`);
+if (selectedRow) {
+selectedRow.classList.add('table-primary');
+}
+// Заполнение модального окна данными о репетиторе
+document.getElementById('orderId').value = '';
+document.getElementById('selectedTutorId').value = tutorId;
+document.getElementById('tutorName').value = tutor.name;
+// Установка типа заявки на "репетитор"
+document.getElementById('tutorOrder').checked = true;
+document.getElementById('courseOrder').checked = false;
+document.getElementById('courseSection').classList.add('d-none');
+document.getElementById('tutorSection').classList.remove('d-none');
+// Установка текущей даты как минимальной для выбора
+const today = new Date().toISOString().split('T')[0];
+document.getElementById('tutorDate').value = today;
+document.getElementById('tutorDate').min = today;
+// Сброс дополнительных опций
+document.querySelectorAll('#orderForm input[type="checkbox"]').forEach(checkbox => {
+checkbox.checked = false;
+});
+// Сброс количества студентов
+document.getElementById('studentsNumber').value = 1;
+// Сброс цены
+document.getElementById('totalPrice').textContent = '0 ₽';
+document.getElementById('priceBreakdown').innerHTML = '';
+// Обновление расчета цены
+updatePriceCalculation();
+// Открытие модального окна
+const modal = new bootstrap.Modal(document.getElementById('orderModal'));
+modal.show();
+console.log('Модальное окно открыто');
+};
+// Инициализация обработчиков событий для кнопок "Выбрать"
+document.addEventListener('DOMContentLoaded', function() {
+console.log('Инициализация обработчиков событий для кнопок "Выбрать"');
+// Функция для добавления обработчиков к существующим кнопкам
+function addTutorSelectHandlers() {
+document.querySelectorAll('.btn-select-tutor').forEach(button => {
+// Удаляем существующие обработчики, чтобы избежать дублирования
+const newButton = button.cloneNode(true);
+button.replaceWith(newButton);
+newButton.addEventListener('click', function(e) {
+e.preventDefault();
+e.stopPropagation();
+const tutorId = this.getAttribute('data-tutor-id');
+console.log('Клик по кнопке "Выбрать" с ID репетитора:', tutorId);
+window.selectTutor(parseInt(tutorId));
+});
+});
+}
+// Добавляем обработчики для текущих кнопок
+addTutorSelectHandlers();
+// Наблюдаем за изменениями в таблице репетиторов
+const observer = new MutationObserver(function(mutations) {
+mutations.forEach(function(mutation) {
+if (mutation.addedNodes.length) {
+console.log('Обнаружены новые элементы, добавляем обработчики');
+addTutorSelectHandlers();
+}
+});
+});
+// Начинаем наблюдение за таблицей репетиторов
+const targetNode = document.getElementById('tutorsTableBody');
+if (targetNode) {
+observer.observe(targetNode, {
+childList: true,
+subtree: true
+});
+console.log('Начато наблюдение за таблицей репетиторов');
+} else {
+console.error('Элемент таблицы репетиторов не найден');
+}
+// Дополнительная проверка через 2 секунды
+setTimeout(() => {
+console.log('Дополнительная проверка через 2 секунды');
+addTutorSelectHandlers();
+}, 2000);
+});
+</script>
+</body>
+</html>
